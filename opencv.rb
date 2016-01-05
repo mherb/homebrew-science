@@ -22,6 +22,7 @@ class Opencv < Formula
   option "with-quicktime", "Use QuickTime for Video I/O instead of QTKit"
   option "with-opengl", "Build with OpenGL support"
   option "with-ximea", "Build with XIMEA support"
+  option "with-vtk", "Build with VTK support"
   option "without-numpy", "Use a numpy you've installed yourself instead of a Homebrew-packaged numpy"
   option "without-python", "Build without Python support"
 
@@ -46,6 +47,7 @@ class Opencv < Formula
   depends_on "pkg-config" => :build
   depends_on "qt"         => :optional
   depends_on "tbb"        => :optional
+  depends_on "vtk"        => :optional
 
   depends_on :python => :recommended unless OS.mac? && MacOS.version > :snow_leopard
   depends_on "homebrew/python/numpy" => :recommended if build.with? "python"
@@ -89,6 +91,7 @@ class Opencv < Formula
     args << "-DWITH_QT="        + arg_switch("qt")
     args << "-DWITH_GSTREAMER=" + arg_switch("gstreamer")
     args << "-DWITH_XIMEA="     + arg_switch("ximea")
+    args << "-DWITH_VTK="       + arg_switch("vtk")
 
     if build.with? "python"
       py_prefix = `python-config --prefix`.chomp
