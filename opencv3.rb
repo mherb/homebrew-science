@@ -37,7 +37,6 @@ class Opencv3 < Formula
   option "with-qt", "Build the Qt4 backend to HighGUI"
   option "with-qt5", "Build the Qt5 backend to HighGUI"
   option "with-tbb", "Enable parallel code in OpenCV using Intel TBB"
-  option "with-vtk", "Build with VTK support"
   option "without-numpy", "Use a numpy you've installed yourself instead of a Homebrew-packaged numpy"
   option "without-opencl", "Disable GPU code in OpenCV using OpenCL"
   option "without-python", "Build without Python support"
