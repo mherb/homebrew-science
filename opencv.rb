@@ -4,6 +4,7 @@ class Opencv < Formula
   url "https://github.com/Itseez/opencv/archive/2.4.12.tar.gz"
   sha256 "8989f946a66fa3fc2764d637b1c866caf28d074ece187f86baba66544054eefc"
   head "https://github.com/Itseez/opencv.git", :branch => "2.4"
+  revision 2
 
   bottle do
     revision 1
