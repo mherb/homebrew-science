@@ -22,7 +22,6 @@ class Opencv < Formula
   option "with-quicktime", "Use QuickTime for Video I/O instead of QTKit"
   option "with-opengl", "Build with OpenGL support"
   option "with-ximea", "Build with XIMEA support"
-  option "with-vtk", "Build with VTK support"
   option "without-numpy", "Use a numpy you've installed yourself instead of a Homebrew-packaged numpy"
   option "without-python", "Build without Python support"
 
